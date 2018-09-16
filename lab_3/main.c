@@ -2,6 +2,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <errno.h>
+#include <stdlib.h>
+#include <sys/wait.h>
 
 void  instruction();
 void  print_attributes(const char* process_name, FILE* file);
@@ -9,13 +11,13 @@ void  print_attributes(const char* process_name, FILE* file);
 int main(int argc, char** argv)
 {
  
- if (argc < 2)
+ if (argc < 3)
  {
    instruction();
    return -1;
  }
 
- FILE* file = fopen(argv[1], "w");
+ FILE* file = fopen(argv[1], "a");
  
  if (file == NULL)
  {
@@ -23,52 +25,58 @@ int main(int argc, char** argv)
   return -1;
  }
 
- print_attributes("Roditel", file);
- fclose(file);
-
  pid_t child_pid = fork();
+ int rv;
+
  if (child_pid == 0)
  {
-  if (execl("/home/karlin/Desktop/lab_3/child",
- "/home/karlin/Desktop/lab_3/child", argv[1], "Potomok1", NULL) == -1)
-  {
-    printf("Failure child1 execl %d\n", errno);
-    return -1;
-  }
+   usleep(atoi(argv[2]));
+   print_attributes("Potomok1", file);
+   fclose(file);
+   return 0;
  }
- else if (child_pid == -1)
+ else if (child_pid < 0)
  {
   printf("Failure fork 1\n");
+  return -1;
  }
-
+ 
  pid_t sec_child_pid = vfork();
  
  if (sec_child_pid == 0)
  {
-  if (execl("/home/karlin/Desktop/lab_3/child",
- "/home/karlin/Desktop/lab_3/child", argv[1], "Potomok2", NULL) == -1)
+  if (execl("./child",
+ "./child", argv[1], "Potomok2", argv[2], NULL) == -1)
   {
     printf("Failure child2 execl %d\n", errno);
     return -1;
   }
  }
- else if (sec_child_pid == -1)
+ else if (sec_child_pid < 0)
  {
   printf("Failure fork 2\n");
+  return -1;
  }
 
- //fclose(file);
+ usleep(atoi(argv[2]));
+ print_attributes("Roditel", file);
+ fclose(file);
+
+ for (int i = 0; i < 2; i++)
+ 	wait(NULL);
+
  return 0;
 }
 
 void instruction()
 {
-  printf("Usage : ./fork [filename]\n");
+  printf("Usage : ./fork [filename] [msec delay (int)]\n");
 }
 
 
 void  print_attributes(const char* process_name, FILE* file)
 {
+  puts(process_name);
   pid_t cur_pid = getpid();
   fprintf(file, "________________________________\n");
   fprintf(file, "Process name : ");
