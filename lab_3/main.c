@@ -4,13 +4,16 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <time.h>
 
 void  instruction();
 void  print_attributes(const char* process_name, FILE* file);
 
 int main(int argc, char** argv)
 {
- 
+ time_t t = time(NULL);
+ struct tm tm = *localtime(&t);
+
  if (argc < 3)
  {
    instruction();
@@ -19,6 +22,8 @@ int main(int argc, char** argv)
 
  FILE* file = fopen(argv[1], "a");
  
+ //fprintf(file, "\n\n");
+
  if (file == NULL)
  {
   puts("Error openning file!");
@@ -46,7 +51,7 @@ int main(int argc, char** argv)
  if (sec_child_pid == 0)
  {
   if (execl("./child",
- "./child", argv[1], "Potomok2", argv[2], NULL) == -1)
+ "./child", argv[1], "Potomok2", argv[3], NULL) == -1)
   {
     printf("Failure child2 execl %d\n", errno);
     return -1;
@@ -58,7 +63,7 @@ int main(int argc, char** argv)
   return -1;
  }
 
- usleep(atoi(argv[2]));
+ usleep(atoi(argv[4]));
  print_attributes("Roditel", file);
  fclose(file);
 
@@ -70,7 +75,7 @@ int main(int argc, char** argv)
 
 void instruction()
 {
-  printf("Usage : ./fork [filename] [msec delay (int)]\n");
+  printf("Usage : ./fork [filename] [msec delay (int)1] [2] [3]\n");
 }
 
 
