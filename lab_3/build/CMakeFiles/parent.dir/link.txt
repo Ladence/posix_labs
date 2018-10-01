@@ -1,0 +1,1 @@
+gcc    CMakeFiles/parent.dir/main.c.o  -o ../parent 

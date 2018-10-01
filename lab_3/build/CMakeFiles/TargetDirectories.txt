@@ -1,0 +1,3 @@
+/home/karlin/Desktop/lab_3/build/CMakeFiles/rebuild_cache.dir
+/home/karlin/Desktop/lab_3/build/CMakeFiles/parent.dir
+/home/karlin/Desktop/lab_3/build/CMakeFiles/edit_cache.dir

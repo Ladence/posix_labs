@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5)
+project(parent C)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "..")
+set(CMAKE_C_COMPILER gcc)
+set(SOURCES main.c)
+add_executable(parent main.c)
