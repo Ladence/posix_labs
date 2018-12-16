@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/task_2_main.dir/main.cc.o  -o task_2_main -rdynamic 

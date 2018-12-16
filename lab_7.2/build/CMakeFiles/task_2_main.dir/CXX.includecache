@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud1/Desktop/posix_labs/lab_7.2/main.cc
+iostream
+-
+fstream
+-
+string
+-
+stdlib.h
+-
+signal.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+unistd.h
+-
+

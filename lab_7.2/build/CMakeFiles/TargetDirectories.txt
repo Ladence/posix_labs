@@ -1,0 +1,4 @@
+/home/stud1/Desktop/posix_labs/lab_7.2/build/CMakeFiles/edit_cache.dir
+/home/stud1/Desktop/posix_labs/lab_7.2/build/CMakeFiles/rebuild_cache.dir
+/home/stud1/Desktop/posix_labs/lab_7.2/build/CMakeFiles/task_2_sub.dir
+/home/stud1/Desktop/posix_labs/lab_7.2/build/CMakeFiles/task_2_main.dir
