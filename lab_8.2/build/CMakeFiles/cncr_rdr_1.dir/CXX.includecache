@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stud1/Desktop/posix_labs/lab_8.2/concurrent_readers.cc
+array
+-
+fstream
+-
+iostream
+-
+string
+-
+cstring
+-
+signal.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+sys/time.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+time.h
+-
+unistd.h
+-
+

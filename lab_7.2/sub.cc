@@ -22,6 +22,14 @@ bool running = true;
 uint8_t parity;
 
 void sig_handler(int sig) {
+
+	if (sig == SIGQUIT)
+	{
+		// we are begin from ODD pid
+		raise(SIGUSR1);
+		return;
+	}
+
 	// invalid combinations of parity and sig
 	if ((parity == ODD && sig == SIGUSR2) ||
 		(parity == EVEN && sig == SIGUSR1)) {
@@ -71,6 +79,7 @@ int main(int argc, char const *argv[]) {
 	psa.sa_handler = sig_handler;
 	sigaction(SIGUSR1, &psa, NULL);
 	sigaction(SIGUSR2, &psa, NULL);
+	sigaction(SIGQUIT, &psa, NULL);
 
 	// child ready to read
 	kill(getppid(), SIGPOLL);

@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/cncr_rdr_1.dir/concurrent_readers.cc.o  -o cncr_rdr_1 -rdynamic 

@@ -1,0 +1,5 @@
+/home/stud1/Desktop/posix_labs/lab_8.2/build/CMakeFiles/edit_cache.dir
+/home/stud1/Desktop/posix_labs/lab_8.2/build/CMakeFiles/cncr_rdr_0.dir
+/home/stud1/Desktop/posix_labs/lab_8.2/build/CMakeFiles/cncr_rdr_1.dir
+/home/stud1/Desktop/posix_labs/lab_8.2/build/CMakeFiles/cncr_rdr_2.dir
+/home/stud1/Desktop/posix_labs/lab_8.2/build/CMakeFiles/rebuild_cache.dir

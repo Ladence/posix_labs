@@ -89,7 +89,7 @@ int main(int argc, char const *argv[]) {
 	while (!child_ready);
 
 	// start syncing
-	kill(odd_pid, SIGUSR1);
+	kill(odd_pid, SIGQUIT);
 
 	// close unused read end
 	close(pipe_fd[FD_READ]);
