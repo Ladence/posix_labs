@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/cncr_wrtr_2.dir/concurrent_writers.cc.o  -o cncr_wrtr_2 

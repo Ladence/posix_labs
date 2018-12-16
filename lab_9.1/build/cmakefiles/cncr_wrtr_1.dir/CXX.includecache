@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/concurrent_writers.cc
+array
+-
+atomic
+-
+fstream
+-
+iostream
+-
+mutex
+-
+string
+-
+cstring
+-
+vector
+-
+signal.h
+-
+sys/ipc.h
+-
+sys/shm.h
+-
+sys/time.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+time.h
+-
+unistd.h
+-
+

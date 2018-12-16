@@ -1,0 +1,17 @@
+writer with id: 2; lines left: 1
+writer with id: 0; lines left: 4
+writer with id: 1; lines left: 9
+writer with id: 2; lines left: 0
+writer with id: 0; lines left: 3
+writer with id: 1; lines left: 8
+writer with id: 0; lines left: 2
+writer with id: 1; lines left: 7
+writer with id: 0; lines left: 1
+writer with id: 1; lines left: 6
+writer with id: 0; lines left: 0
+writer with id: 1; lines left: 5
+writer with id: 1; lines left: 4
+writer with id: 1; lines left: 3
+writer with id: 1; lines left: 2
+writer with id: 1; lines left: 1
+writer with id: 1; lines left: 0

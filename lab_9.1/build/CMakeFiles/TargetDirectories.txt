@@ -1,0 +1,7 @@
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/rebuild_cache.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/inc.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/cncr_wrtr_0.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/cncr_wrtr_1.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/swaper.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/cncr_wrtr_2.dir
+/home/konstantin/Dropbox/projects/c_cpp/linux_labs/lab_9_shm/build/CMakeFiles/edit_cache.dir
